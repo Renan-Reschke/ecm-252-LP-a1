@@ -1,17 +1,17 @@
 // //Constante
 // const nome = "José"
 // const idade = 27
-// //
+//
 
 // //Variável
 // let a = 2 //escopo local
 // a = "abc" //Tipagem dinâmica
-// //
+//
 
-// //
+// 
 // var c = 2 + 3 //escopo global
 // c = 5
-// //
+//
 
 // var ling = "Javascript"
 // console.log("Aprendendo " + ling)
