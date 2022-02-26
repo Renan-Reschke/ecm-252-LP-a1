@@ -34,13 +34,13 @@
 //     console.log(v1[i])
 // }
 
-const nomes = [
-    "Ana Maria",
-    "Antonio",
-    "Rodrigo",
-    "Alex",
-    "Cristina"
-]
+// const nomes = [
+//     "Ana Maria",
+//     "Antonio",
+//     "Rodrigo",
+//     "Alex",
+//     "Cristina"
+// ]
 
 // filter(funcao){
     // funcao()
@@ -49,8 +49,27 @@ const nomes = [
 // arrow function
 // () => { }
 
+// console.log(
+// nomes.filter((n) => {
+//     return n.startsWith('A')
+// })
+// )
 
+// console.log(
+//     nomes.map((n) => {
+//     return n.charAt(0)
+// })
+// )
 
+// console.log(
+//     nomes.every((n) => {
+//     return n.startsWith('A')
+// })
+// )
 
-
+// const  val = [1, 2, 3, 4]
+// const soma = val.reduce((ac, atual) => {
+//     return ac + atual
+// })
+// console.log(soma)
 
