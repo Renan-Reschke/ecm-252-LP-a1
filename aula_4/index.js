@@ -1,18 +1,27 @@
-axios = require('axios')
-
 require('dotenv').config()
+const axios = require('axios')
 
-const {PROTOCOL, BASE_URL, APPID, LANGUAGE, UNITS} = process.env
+const { APIKEY, PROTOCOL, BASE_URL, LANGUAGE, UNITS } = process.env
 
-const url = `${PROTOCOL}://${BASE_URL}?appid=${APPID}&lang=${LANGUAGE}&units=${UNITS}&q=Itu`
 
+city = 'Itupeva'
+const url = `${PROTOCOL}://${BASE_URL}?q=${city}&appid=${process.env.APIKEYWEATHER}&lang=${LANGUAGE}&units=${UNITS}`
+
+
+// IO-Bound
 axios.get(url)
 .then(res => {
-        console.log(res)
-        return res.data
+    return res.data
 })
-.then(res => {return res})
-.then(res => {return res['list']})
-// const privKey = '8b80404ecffb05b15db74ea1dd632240'
-// const apiLink = `https//api.openweathermap.org/data/2.5/forecast?q=Itu&appid=${privKey}`
-
+.then(res => {
+    return res.cnt
+})
+.then(res => {
+    return res.list
+})
+ .then(res => {
+     for(let previsao in res){
+        if(previsao.main.feels_like >= 0)
+            console.log("EITA QUENTINHO!")
+     }
+ })
